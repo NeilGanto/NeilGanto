@@ -1,0 +1,55 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.box-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #000;
+  margin: 20px auto;
+  transition: background-color 0.3s ease;
+}
+
+.box-container:hover {
+  background-color: green;
+}
+
+.calculator-title, .counter-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.calculator-input, .calculator-select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #000;
+}
+
+.calculate-button, .counter-buttons button {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.counter-display {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.calculator-result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
