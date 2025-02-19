@@ -8,48 +8,107 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
+  background-color: #28a745; /* Green background */
+  text-align: center;
+  color: white; /* Ensures text is readable */
+  
+  /* Centering the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* Box Container */
 .box-container {
   width: 100%;
   max-width: 400px;
   padding: 20px;
-  border: 1px solid #000;
-  margin: 20px auto;
-  transition: background-color 0.3s ease;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff; /* White container for contrast */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .box-container:hover {
-  background-color: green;
+  background-color: #e6ffe6;
+  transform: scale(1.02);
 }
 
+/* Titles */
 .calculator-title, .counter-title {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #333; /* Darker text for readability */
+  margin-bottom: 15px;
 }
 
+/* Inputs & Select */
 .calculator-input, .calculator-select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
 }
 
+.calculator-input:focus, .calculator-select:focus {
+  border-color: #218838;
+  box-shadow: 0px 0px 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Buttons */
 .calculate-button, .counter-buttons button {
-  padding: 10px 20px;
-  border: 1px solid #000;
+  padding: 12px 20px;
+  border: none;
+  background-color: #fff; /* White buttons */
+  color: #28a745; /* Green text */
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.calculate-button:hover, .counter-buttons button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Counter Display */
 .counter-display {
   font-size: 3rem;
   font-weight: bold;
-  margin: 10px 0;
+  color: #fff; /* White text */
+  margin: 15px 0;
 }
 
+/* Calculator Result */
 .calculator-result {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 10px;
+  color: #333;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .box-container {
+    padding: 15px;
+  }
+  
+  .calculator-title, .counter-title {
+    font-size: 1.8rem;
+  }
+
+  .counter-display {
+    font-size: 2.5rem;
+  }
+
+  .calculator-result {
+    font-size: 1.3rem;
+  }
 }
